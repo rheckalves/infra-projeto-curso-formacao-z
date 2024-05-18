@@ -19,9 +19,6 @@ do
     echo "Atualizando o repositório $repo_name"
     cd "$repo_name"
     git pull
-	if [ "$repo_name" == "order-mngt-api" ]; then
-      git checkout 1.0.0
-    fi
     cd ..
   else
     # Se não existir, clona o repositório
@@ -32,6 +29,7 @@ done
 
 cd search-api && git checkout melt && cd ..
 cd webshop-api && git checkout melt && cd ..
+cd order-mngt-api && git checkout melt && cd ..
 git checkout melt
 
 # Executa o Docker Compose
