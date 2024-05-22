@@ -13,7 +13,7 @@ heartbeat.monitors:
 - type: http
   schedule: '@every 5s'
   urls: [ "http://webshop-api:3000" ]
-  name: webshop-api # the service name in the apm
+  name: webshop-api
 
 - type: http
   schedule: '@every 5s'
